@@ -151,7 +151,7 @@ def form_instituicao(request):
 def indicacao(request, id, nome):
     form = IndicadoForm(request.POST or None, request.FILES or None)
     usu = get_object_or_404(Usuario, pk=id)
-    status = get_object_or_404(Indicado_status, pk=1)
+    status = get_object_or_404(Indicado_status, nome='Pendente')
     email_wassis = get_object_or_404(Textos, descricao='nova indicação - WAssis')
     email_jovem = get_object_or_404(Textos, descricao='nova indicação - Jovem')
     email_indicado = get_object_or_404(Textos, descricao='nova indicação - Indicado')
