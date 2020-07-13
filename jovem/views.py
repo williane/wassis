@@ -158,7 +158,7 @@ def indicacao(request, id, nome):
 
     try:
         if str(usu.tipo) == 'jovem':
-            texto = get_object_or_404(Textos, pk=1)
+            texto = get_object_or_404(Textos, descricao='Página Jovem')
 
         if str(usu.tipo) == 'instituição':
             texto = get_object_or_404(Instituicao, nome=usu.instituicao.nome)
